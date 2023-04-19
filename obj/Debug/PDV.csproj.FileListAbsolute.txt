@@ -1,0 +1,11 @@
+C:\Users\Jorge\Documents\Projeto\backend\ProjetoFull\pdv\PDV\bin\Debug\PDV.exe.config
+C:\Users\Jorge\Documents\Projeto\backend\ProjetoFull\pdv\PDV\bin\Debug\PDV.exe
+C:\Users\Jorge\Documents\Projeto\backend\ProjetoFull\pdv\PDV\bin\Debug\PDV.pdb
+C:\Users\Jorge\Documents\Projeto\backend\ProjetoFull\pdv\PDV\obj\Debug\PDV.csproj.AssemblyReference.cache
+C:\Users\Jorge\Documents\Projeto\backend\ProjetoFull\pdv\PDV\obj\Debug\PDV.csproj.SuggestedBindingRedirects.cache
+C:\Users\Jorge\Documents\Projeto\backend\ProjetoFull\pdv\PDV\obj\Debug\PDV.frmPrincipal.resources
+C:\Users\Jorge\Documents\Projeto\backend\ProjetoFull\pdv\PDV\obj\Debug\PDV.Properties.Resources.resources
+C:\Users\Jorge\Documents\Projeto\backend\ProjetoFull\pdv\PDV\obj\Debug\PDV.csproj.GenerateResource.cache
+C:\Users\Jorge\Documents\Projeto\backend\ProjetoFull\pdv\PDV\obj\Debug\PDV.csproj.CoreCompileInputs.cache
+C:\Users\Jorge\Documents\Projeto\backend\ProjetoFull\pdv\PDV\obj\Debug\PDV.exe
+C:\Users\Jorge\Documents\Projeto\backend\ProjetoFull\pdv\PDV\obj\Debug\PDV.pdb
