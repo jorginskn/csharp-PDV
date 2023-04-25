@@ -21,5 +21,18 @@ namespace PDV
         {
 
         }
+
+        private void buttonSair(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void abrirCadastroDeUsuario(object sender, EventArgs e)
+        {
+            cadastro.FrmCadastro frmCadastro = new cadastro.FrmCadastro();
+            frmCadastro.ShowDialog();
+        }
+
+      
     }
 }
