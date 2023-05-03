@@ -90,7 +90,6 @@
             this.MenuCadastro.Name = "MenuCadastro";
             this.MenuCadastro.Size = new System.Drawing.Size(121, 28);
             this.MenuCadastro.Text = "CADASTROS";
-             
             // 
             // MenuFuncionario
             // 
@@ -299,10 +298,12 @@
             this.Controls.Add(this.img04);
             this.Controls.Add(this.img01);
             this.Controls.Add(this.MenuPrincipal);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(50, 50);
             this.MainMenuStrip = this.MenuPrincipal;
             this.Name = "frmPrincipal";
             this.Text = "Tela Principal";
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.MenuPrincipal.ResumeLayout(false);
             this.MenuPrincipal.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img01)).EndInit();
