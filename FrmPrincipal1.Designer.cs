@@ -162,8 +162,7 @@
             this.MenuFluxoCaixa.Name = "MenuFluxoCaixa";
             this.MenuFluxoCaixa.Size = new System.Drawing.Size(186, 28);
             this.MenuFluxoCaixa.Text = "Fluxo caixa";
-            this.MenuFluxoCaixa.Click += new System.EventHandler(this.moviToolStripMenuItem_Click);
-            // 
+             // 
             // MenuLancarVendas
             // 
             this.MenuLancarVendas.Name = "MenuLancarVendas";

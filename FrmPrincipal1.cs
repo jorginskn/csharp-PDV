@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySqlConnector;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,10 +18,7 @@ namespace PDV
             InitializeComponent();
         }
 
-        private void moviToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
+         
 
         private void buttonSair(object sender, EventArgs e)
         {
@@ -35,7 +33,7 @@ namespace PDV
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-
+           
         }
     }
 }
