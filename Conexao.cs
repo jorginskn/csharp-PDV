@@ -4,42 +4,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySqlConnector;
+using MySql.Data.MySqlClient;
 
- namespace PDV
+namespace PDV
 {
-     class Conexao
+    class Conexao
     {
-        public  string mysqlcon = "SERVER=localhost DATABASE=pdv;UID=root;pwd=; port=;";
-        public MySqlConnection mySqlConnection = null;
 
-          public void AbrirConexao()
+        string conection = "DATABASE=projetopdv; SERVER=localhost; port=3306; UID=root;pwd='1234567'";
+      public  MySqlConnection conexao;
+        public void AbrirConexao()
+        {
+            try
             {
-                try
-                {
-                    mySqlConnection = new MySqlConnection(mysqlcon);
-                    mySqlConnection.Open();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erro de conexão com o Banco de Dados" + ex.Message);
-                }
+                conexao = new MySqlConnection(conection);
+                conexao.Open(); 
             }
-         public void fecharConexao()
+            catch (Exception ex)
+
             {
-                try
-                {
-                    mySqlConnection= new MySqlConnection(mysqlcon);
-                    mySqlConnection.Close();
-                    mySqlConnection.Dispose();
-                     
-  
-                }
-                catch(Exception ex) 
-                {
-                    MessageBox.Show("Erro de conexão com o Banco de Dados" + ex.Message);
-                }
+                MessageBox.Show("Erro de conexão com o Banco de Dados" + ex.Message);
+                return;
             }
-          
+        }
+        public void fecharConexao()
+        {
+            try
+            {
+                conexao.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro de conexão com o Banco de Dados" + ex.Message);
+            }
+        }
+
     }
 }

@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.MenuPrincipal = new System.Windows.Forms.MenuStrip();
             this.MenuCadastro = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuCliente = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuFuncionario = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuClientes = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuUsuários = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuCargos = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuFornecedor = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,8 +81,8 @@
             // MenuCadastro
             // 
             this.MenuCadastro.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuCliente,
             this.MenuFuncionario,
-            this.MenuClientes,
             this.MenuUsuários,
             this.MenuCargos,
             this.MenuFornecedor});
@@ -91,35 +91,35 @@
             this.MenuCadastro.Size = new System.Drawing.Size(121, 28);
             this.MenuCadastro.Text = "CADASTROS";
             // 
+            // MenuCliente
+            // 
+            this.MenuCliente.Name = "MenuCliente";
+            this.MenuCliente.Size = new System.Drawing.Size(180, 28);
+            this.MenuCliente.Text = "Cliente";
+            this.MenuCliente.Click += new System.EventHandler(this.abrirCadastroDeUsuario);
+            // 
             // MenuFuncionario
             // 
             this.MenuFuncionario.Name = "MenuFuncionario";
-            this.MenuFuncionario.Size = new System.Drawing.Size(185, 28);
-            this.MenuFuncionario.Text = "Funcionários";
-            this.MenuFuncionario.Click += new System.EventHandler(this.abrirCadastroDeUsuario);
-            // 
-            // MenuClientes
-            // 
-            this.MenuClientes.Name = "MenuClientes";
-            this.MenuClientes.Size = new System.Drawing.Size(185, 28);
-            this.MenuClientes.Text = "Clientes";
+            this.MenuFuncionario.Size = new System.Drawing.Size(180, 28);
+            this.MenuFuncionario.Text = "Funcionário";
             // 
             // MenuUsuários
             // 
             this.MenuUsuários.Name = "MenuUsuários";
-            this.MenuUsuários.Size = new System.Drawing.Size(185, 28);
+            this.MenuUsuários.Size = new System.Drawing.Size(180, 28);
             this.MenuUsuários.Text = "Usuários";
             // 
             // MenuCargos
             // 
             this.MenuCargos.Name = "MenuCargos";
-            this.MenuCargos.Size = new System.Drawing.Size(185, 28);
+            this.MenuCargos.Size = new System.Drawing.Size(180, 28);
             this.MenuCargos.Text = "Cargos";
             // 
             // MenuFornecedor
             // 
             this.MenuFornecedor.Name = "MenuFornecedor";
-            this.MenuFornecedor.Size = new System.Drawing.Size(185, 28);
+            this.MenuFornecedor.Size = new System.Drawing.Size(180, 28);
             this.MenuFornecedor.Text = "Fornecedor";
             // 
             // MenuProduto
@@ -135,13 +135,13 @@
             // MenuProdutos
             // 
             this.MenuProdutos.Name = "MenuProdutos";
-            this.MenuProdutos.Size = new System.Drawing.Size(153, 28);
+            this.MenuProdutos.Size = new System.Drawing.Size(180, 28);
             this.MenuProdutos.Text = "Produtos";
             // 
             // MenuEstoque
             // 
             this.MenuEstoque.Name = "MenuEstoque";
-            this.MenuEstoque.Size = new System.Drawing.Size(153, 28);
+            this.MenuEstoque.Size = new System.Drawing.Size(180, 28);
             this.MenuEstoque.Text = "Estoque";
             // 
             // MenuMovimentacoes
@@ -162,7 +162,7 @@
             this.MenuFluxoCaixa.Name = "MenuFluxoCaixa";
             this.MenuFluxoCaixa.Size = new System.Drawing.Size(186, 28);
             this.MenuFluxoCaixa.Text = "Fluxo caixa";
-             // 
+            // 
             // MenuLancarVendas
             // 
             this.MenuLancarVendas.Name = "MenuLancarVendas";
@@ -326,8 +326,8 @@
         private System.Windows.Forms.PictureBox img04;
         private System.Windows.Forms.PictureBox img02;
         private System.Windows.Forms.PictureBox img03;
+        private System.Windows.Forms.ToolStripMenuItem MenuCliente;
         private System.Windows.Forms.ToolStripMenuItem MenuFuncionario;
-        private System.Windows.Forms.ToolStripMenuItem MenuClientes;
         private System.Windows.Forms.ToolStripMenuItem MenuUsuários;
         private System.Windows.Forms.ToolStripMenuItem MenuCargos;
         private System.Windows.Forms.ToolStripMenuItem MenuFornecedor;

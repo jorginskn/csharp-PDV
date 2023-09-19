@@ -1,6 +1,6 @@
 ﻿namespace PDV.cadastro
 {
-    partial class FrmFuncionario
+    partial class FrmCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -38,13 +38,13 @@
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.txtCpf = new System.Windows.Forms.TextBox();
-            this.cbCargo = new System.Windows.Forms.ComboBox();
             this.img = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
+            this.txtCargo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -132,14 +132,6 @@
             this.txtCpf.Size = new System.Drawing.Size(147, 20);
             this.txtCpf.TabIndex = 9;
             // 
-            // cbCargo
-            // 
-            this.cbCargo.FormattingEnabled = true;
-            this.cbCargo.Location = new System.Drawing.Point(605, 74);
-            this.cbCargo.Name = "cbCargo";
-            this.cbCargo.Size = new System.Drawing.Size(147, 21);
-            this.cbCargo.TabIndex = 11;
-            // 
             // img
             // 
             this.img.Location = new System.Drawing.Point(892, 22);
@@ -167,7 +159,7 @@
             this.btnNovo.TabIndex = 14;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = true;
-             // 
+            // 
             // btnSalvar
             // 
             this.btnSalvar.Location = new System.Drawing.Point(139, 505);
@@ -196,18 +188,25 @@
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             // 
+            // txtCargo
+            // 
+            this.txtCargo.Location = new System.Drawing.Point(605, 70);
+            this.txtCargo.Name = "txtCargo";
+            this.txtCargo.Size = new System.Drawing.Size(147, 20);
+            this.txtCargo.TabIndex = 18;
+            // 
             // FrmFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1122, 574);
+            this.Controls.Add(this.txtCargo);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.img);
-            this.Controls.Add(this.cbCargo);
             this.Controls.Add(this.txtCpf);
             this.Controls.Add(this.txtEndereco);
             this.Controls.Add(this.txtTelefone);
@@ -240,12 +239,12 @@
         private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.TextBox txtCpf;
-        private System.Windows.Forms.ComboBox cbCargo;
         private System.Windows.Forms.PictureBox img;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.TextBox txtCargo;
     }
 }

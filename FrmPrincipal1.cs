@@ -27,7 +27,7 @@ namespace PDV
 
         private void abrirCadastroDeUsuario(object sender, EventArgs e)
         {
-            cadastro.FrmFuncionario frmCadastro = new cadastro.FrmFuncionario();
+            cadastro.FrmCliente frmCadastro = new cadastro.FrmCliente();
             frmCadastro.ShowDialog();
         }
 
