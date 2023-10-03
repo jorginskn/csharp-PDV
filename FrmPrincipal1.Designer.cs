@@ -96,13 +96,14 @@
             this.MenuCliente.Name = "MenuCliente";
             this.MenuCliente.Size = new System.Drawing.Size(180, 28);
             this.MenuCliente.Text = "Cliente";
-            this.MenuCliente.Click += new System.EventHandler(this.abrirCadastroDeUsuario);
+            this.MenuCliente.Click += new System.EventHandler(this.OpenCustomerRegistration);
             // 
             // MenuFuncionario
             // 
             this.MenuFuncionario.Name = "MenuFuncionario";
             this.MenuFuncionario.Size = new System.Drawing.Size(180, 28);
             this.MenuFuncionario.Text = "Funcionário";
+            this.MenuFuncionario.Click += new System.EventHandler(this.OpenEmployeeRegistration);
             // 
             // MenuUsuários
             // 

@@ -25,7 +25,7 @@ namespace PDV
             this.Close();
         }
 
-        private void abrirCadastroDeUsuario(object sender, EventArgs e)
+        private void OpenCustomerRegistration(object sender, EventArgs e)
         {
             cadastro.FrmCliente frmCadastro = new cadastro.FrmCliente();
             frmCadastro.ShowDialog();
@@ -34,6 +34,12 @@ namespace PDV
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
            
+        }
+
+        private void OpenEmployeeRegistration(object sender, EventArgs e)
+        {
+            cadastro.FrmFuncionario frm = new cadastro.FrmFuncionario();
+            frm.ShowDialog();
         }
     }
 }
