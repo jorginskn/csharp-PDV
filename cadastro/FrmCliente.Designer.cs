@@ -33,19 +33,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.txtCpf = new System.Windows.Forms.TextBox();
-            this.img = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.txtCargo = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.img)).BeginInit();
+            this.labelbuscar = new System.Windows.Forms.Label();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,16 +60,16 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(564, 25);
+            this.label2.Location = new System.Drawing.Point(12, 129);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(23, 13);
+            this.label2.Size = new System.Drawing.Size(27, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Cpf";
+            this.label2.Text = "CPF";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 82);
+            this.label3.Location = new System.Drawing.Point(12, 58);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 2;
@@ -79,7 +78,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 134);
+            this.label4.Location = new System.Drawing.Point(12, 95);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 3;
@@ -88,21 +87,12 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(564, 70);
+            this.label5.Location = new System.Drawing.Point(12, 160);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 4;
             this.label5.Text = "Cargo";
             this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(844, 28);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(28, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Foto";
             // 
             // txtName
             // 
@@ -113,32 +103,24 @@
             // 
             // txtTelefone
             // 
-            this.txtTelefone.Location = new System.Drawing.Point(67, 82);
+            this.txtTelefone.Location = new System.Drawing.Point(67, 55);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(147, 20);
             this.txtTelefone.TabIndex = 7;
             // 
             // txtEndereco
             // 
-            this.txtEndereco.Location = new System.Drawing.Point(67, 131);
+            this.txtEndereco.Location = new System.Drawing.Point(67, 92);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(370, 20);
             this.txtEndereco.TabIndex = 8;
             // 
             // txtCpf
             // 
-            this.txtCpf.Location = new System.Drawing.Point(605, 25);
+            this.txtCpf.Location = new System.Drawing.Point(67, 126);
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(147, 20);
             this.txtCpf.TabIndex = 9;
-            // 
-            // img
-            // 
-            this.img.Location = new System.Drawing.Point(892, 22);
-            this.img.Name = "img";
-            this.img.Size = new System.Drawing.Size(197, 151);
-            this.img.TabIndex = 12;
-            this.img.TabStop = false;
             // 
             // dataGridView1
             // 
@@ -159,6 +141,7 @@
             this.btnNovo.TabIndex = 14;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnSalvar
             // 
@@ -178,6 +161,7 @@
             this.btnEditar.TabIndex = 16;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnExcluir
             // 
@@ -190,37 +174,52 @@
             // 
             // txtCargo
             // 
-            this.txtCargo.Location = new System.Drawing.Point(605, 70);
+            this.txtCargo.Location = new System.Drawing.Point(67, 160);
             this.txtCargo.Name = "txtCargo";
             this.txtCargo.Size = new System.Drawing.Size(147, 20);
             this.txtCargo.TabIndex = 18;
             // 
-            // FrmFuncionario
+            // labelbuscar
+            // 
+            this.labelbuscar.AutoSize = true;
+            this.labelbuscar.Location = new System.Drawing.Point(680, 32);
+            this.labelbuscar.Name = "labelbuscar";
+            this.labelbuscar.Size = new System.Drawing.Size(40, 13);
+            this.labelbuscar.TabIndex = 19;
+            this.labelbuscar.Text = "Buscar";
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(730, 29);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(260, 20);
+            this.txtBuscar.TabIndex = 20;
+            // 
+            // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1122, 574);
+            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.labelbuscar);
             this.Controls.Add(this.txtCargo);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.img);
             this.Controls.Add(this.txtCpf);
             this.Controls.Add(this.txtEndereco);
             this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.txtName);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "FrmFuncionario";
+            this.Name = "FrmCliente";
             this.Text = "Cadastro Funcionário";
             this.Load += new System.EventHandler(this.FrmFuncionario_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.img)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -234,17 +233,17 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.TextBox txtCpf;
-        private System.Windows.Forms.PictureBox img;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.TextBox txtCargo;
+        private System.Windows.Forms.Label labelbuscar;
+        private System.Windows.Forms.TextBox txtBuscar;
     }
 }

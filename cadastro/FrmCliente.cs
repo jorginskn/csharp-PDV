@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using PDV;
 using MySql.Data.MySqlClient;
+using System.Security.Cryptography.X509Certificates;
+
 namespace PDV.cadastro
 {
 
@@ -35,15 +37,39 @@ namespace PDV.cadastro
 
         private bool validationForm()
         {
-            if (txtName.Text == "" || txtCpf.Text == "" || txtCargo.Text == "" || txtEndereco.Text == "" || txtTelefone.Text == "")
+            if (txtName.Text.Trim() == "")
             {
-                MessageBox.Show("Existem Campos vazios!");
+                MessageBox.Show("O Campo Nome está vazio!");
+                txtName.Focus();
+                return false;
+            }
+            if (txtCpf.Text.Trim() == "")
+            {
+                MessageBox.Show("O Campo CPF está vazio!");
+                txtCpf.Focus();
+                return false;
+            }
+            if (txtCargo.Text.Trim() == "")
+            {
+                MessageBox.Show("O Campo Cargo está vazio!");
+                txtCargo.Focus();
+                return false;
+            }
+            if (txtEndereco.Text.Trim() == "")
+            {
+                MessageBox.Show("O Campo Endereço está vazio!");
+                txtEndereco.Focus();
+                return false;
+            }
+            if (txtTelefone.Text.Trim() == "")
+            {
+                MessageBox.Show("O Campo Telefone está vazio!");
+                txtTelefone.Focus();
                 return false;
             }
             else
             {
                 return true;
-
             }
         }
 
@@ -64,10 +90,55 @@ namespace PDV.cadastro
 
             }
 
+        }
+        public void DisableFilds()
+        {
+            txtName.Enabled = false;
+            txtCpf.Enabled = false;
+            txtEndereco.Enabled = false;
+            txtCargo.Enabled = false;
+            txtTelefone.Enabled = false;
+        }
+        public void enableFilds()
+        {
+            txtName.Enabled = true;
+            txtCpf.Enabled = true;
+            txtEndereco.Enabled = true;
+            txtCargo.Enabled = true;
+            txtTelefone.Enabled = true;
+        }
+        public void clearFilds()
+        {
+            txtName.Text = string.Empty;
+            txtCpf.Text = string.Empty;
+            txtEndereco.Text = string.Empty;
+            txtCargo.Text = string.Empty;
+            txtTelefone.Text = string.Empty;
 
+        }
 
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            con.AbrirConexao();
+            string sql = "UPDATE pdv_cliente SET nome=@nome, cpf=@cpf, endereco=@endereco, telefone=@telefone, cargo=@cargo ";
+            cmd = new MySqlCommand(sql, con.conexao);
+            cmd.Parameters.AddWithValue("@nome", txtName.Text);
+            cmd.Parameters.AddWithValue("@cpf", txtCpf.Text);
+            cmd.Parameters.AddWithValue("@endereco", txtEndereco.Text);
+            cmd.Parameters.AddWithValue("@telefone", txtTelefone.Text);
+            cmd.Parameters.AddWithValue("@cargo", txtCargo.Text);
+            cmd.ExecuteNonQuery();
+            con.fecharConexao();
+            txtBuscar.Focus();
+            clearFilds();
+            DisableFilds();
+        }
 
-
+        private void btnNovo_Click(object sender, EventArgs e)
+        {   
+            clearFilds();
+            enableFilds();
+            txtName.Focus();    
         }
     }
 }
